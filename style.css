@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+
+.mainMenu {
+    flex-direction: column;
+    font-family: Roboto;
+    display: flex;
+    
+}
+
+.head {
+
+    font-weight: bold;
+    color: #959BA4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vw;
+   
+}
+
+
+.header {
+    width: 100%;
+    background-color: #F5F5F6;
+    font-size: 13px;
+    height: 50px;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+body {
+    margin: 0;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.enterButton:hover{
+    background-color: #833AE0;
+    color: white;
+}
+
+.head-button {
+    display: none;
+}
+
+
+.bankButton {
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #959BA4;
+    width: 27vw;
+    flex-direction: column;
+    
+}
+
+.head p:hover, .mob p:hover {
+    color: #000000;
+    cursor: pointer;
+    transition: 1000ms;
+}
+
+button {
+    width: 7vw;
+    min-width: 58px;
+    height: 35px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.main {
+    margin: auto;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+.sections {
+    width: 56vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section {
+    min-width: 265px;
+}
+
+.section p {
+    margin-top: 8px;
+    margin-bottom: 11px;
+    color: #9F9F9F;
+}
+
+.first {
+    margin-right: 65px;
+}
+
+.values {
+    color: #E5E5E5;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+}
+
+input {
+    border: none;
+    width: 18vw;
+    min-width: 215px;
+    font-size: 36px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+td {
+    width: 6vw;
+    min-width: 65px;
+    text-align: center;
+    margin: 0 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:0px;
+    border-right:  1px solid #E5E5E5;
+}
+
+.last-td {
+    border-right: 0px;
+}
+
+td:hover {
+    color: #FFFFFF;
+    transition: 1000ms;
+    cursor: pointer;
+    background-color: #833AE0;
+    
+}
+
+input:focus {
+    outline: none;
+}
+
+.block {
+    padding: 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    
+}
+
+.block p {
+    margin: 0;
+}
+
+@media (max-width: 920px) {
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+  
+    .head {
+        display: none;
+    }
+
+    .main {
+        
+        padding-bottom: 18px;
+        
+    }
+    
+    .head-button {
+        display: block;
+    }
+    
+    
+}
