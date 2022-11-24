@@ -51,6 +51,17 @@ img:hover {
     display: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
 
 .bankButton {
     padding: 10px;
@@ -70,7 +81,6 @@ img:hover {
 .head p:hover, .mob p:hover {
     color: #000000;
     cursor: pointer;
-    transition: 1000ms;
 }
 
 button {
@@ -156,11 +166,9 @@ td {
 }
 
 td:hover {
-    color: #FFFFFF;
-    transition: 1000ms;
+    /* color: #FFFFFF; */
     cursor: pointer;
     background-color: #833AE0;
-    
 }
 
 input:focus {
