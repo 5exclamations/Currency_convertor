@@ -1,7 +1,7 @@
 let input1 = document.querySelector('.firstInput');
 let input2 = document.querySelector('.secondInput');
 let left = 'UAH';
-let right = 'UAH';
+let right = 'USD';
 
 document.querySelectorAll('.left').forEach(element => {
   element.addEventListener('click', ()=>{
@@ -28,7 +28,6 @@ function calc(left, right, num) {  fetch(`https://api.exchangerate.host/latest?b
     input2.value = cutNumber((input1.value*data.rates[`${right}`]).toString())
     else {
       input1.value = cutNumber((input2.value*data.rates[`${right}`]).toString());
-      // input1.value = deleteDot(input1.value);
     }
   }, 1);
   document.querySelectorAll('.leftP').forEach((element) => {
@@ -42,15 +41,13 @@ function calc(left, right, num) {  fetch(`https://api.exchangerate.host/latest?b
   console.log('error');
 })
 }
-input2.addEventListener('input', ()=>{
-  calc(right, left, 1)
+input2.addEventListener('input', (event)=>{
+  calc(left, right, 1)
   cutNumberInput(input2);
-  deleteDot(input2)
 })
 input1.addEventListener('input', (item)=>{
   calc(left, right, 0)
   cutNumberInput(input1);
-  // input1.value = deleteDot(input1.value)
 })
 
 function cutNumberInput(num){
@@ -68,9 +65,10 @@ function cutNumber (num){
 function deleteDot (num){
   num = num.toString().split('');
   for(i=0;i<num.length;i++){
-    if(num[i] === ',') num[i] = '.';
+    console.log(num[i])
+      if(num[i] == ',') num[i] = '.';
   }
   num = num.join('');
   console.log(num);
-  return num;
+  return Number(num);
 }

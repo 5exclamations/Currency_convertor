@@ -1,26 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
-
-
 .mainMenu {
     flex-direction: column;
     font-family: Roboto;
     display: flex;
-    
 }
-
 .head {
-
     font-weight: bold;
     color: #959BA4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 60vw;
-   
 }
-
-
 .header {
     width: 100%;
     background-color: #F5F5F6;
@@ -31,38 +22,30 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-   
 }
-
 body {
     margin: 0;
 }
-
 img:hover {
     cursor: pointer;
 }
-
 .enterButton:hover{
     background-color: #833AE0;
     color: white;
 }
-
 .head-button {
     display: none;
 }
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-
 input[type='number'],
 input[type="number"]:hover,
 input[type="number"]:focus {
     appearance: none;
     -moz-appearance: textfield;
 }
-
 .bankButton {
     padding: 10px;
     position: absolute;
@@ -77,12 +60,10 @@ input[type="number"]:focus {
     flex-direction: column;
     
 }
-
 .head p:hover, .mob p:hover {
     color: #000000;
     cursor: pointer;
 }
-
 button {
     width: 7vw;
     min-width: 58px;
@@ -93,19 +74,15 @@ button {
     font-family: Roboto;
     font-weight: bold;
 }
-
 button:hover {
     cursor: pointer;
 }
-
 .main {
     margin: auto;
 }
-
 h1 {
     font-size: 54px;
 }
-
 .sections {
     width: 56vw;
     display: flex;
@@ -113,21 +90,17 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
 .section {
     min-width: 265px;
 }
-
 .section p {
     margin-top: 8px;
     margin-bottom: 11px;
     color: #9F9F9F;
 }
-
 .first {
     margin-right: 65px;
 }
-
 .values {
     color: #E5E5E5;
     border: 1px solid #E5E5E5;
@@ -137,9 +110,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
-  
 }
-
 input {
     border: none;
     width: 18vw;
@@ -149,7 +120,6 @@ input {
     font-weight: bold;
     margin-bottom: 20px;
 }
-
 td {
     width: 6vw;
     min-width: 65px;
@@ -160,32 +130,24 @@ td {
     border:0px;
     border-right:  1px solid #E5E5E5;
 }
-
 .last-td {
     border-right: 0px;
 }
-
 td:hover {
-    /* color: #FFFFFF; */
     cursor: pointer;
     background-color: #833AE0;
 }
-
 input:focus {
     outline: none;
 }
-
 .block {
     padding: 15px;
     border: 1px solid #E5E5E5;
     border-radius: 3px;
-    
 }
-
 .block p {
     margin: 0;
 }
-
 @media (max-width: 920px) {
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
   
