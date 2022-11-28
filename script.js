@@ -22,14 +22,31 @@ document.querySelectorAll('.right').forEach(element => {
       calc(left, right, 0);
   })
 })
+input2.addEventListener('input', (event)=>{
+  calc(left, right, 1)
+  cutNumberInput(input2);
+})
+input1.addEventListener('input', (item)=>{
+  calc(left, right, 0)
+  cutNumberInput(input1);
+})
+
+menuButton.addEventListener('click', (event) =>{
+  if(display){
+  document.querySelector('.showDiv').style.display = 'none';
+  display = false
+  }
+  else{
+    document.querySelector('.showDiv').style.display = 'block';
+    display = true; 
+  }
+})
 function calc(left, right, num) {
 fetch(`https://api.exchangerate.host/latest?base=${left}&symbols=${right}`)
 .then(res => res.json())
 .then(data => {
-  input1.value.replace(',', '.')
-  // for (let i=0; i<input1.value.length; i++){
-  //   if(input1.value[i] ==',') input1.value[i] = '.'
-  // }
+  input1.value = input1.value.replace(',', '.');
+  input2.value = input2.value.replace(',', '.');
   setTimeout(()=> {
     if (num == 0){
     input2.value = cutNumber((despace(input1.value)*data.rates[`${right}`]).toString())
@@ -53,30 +70,6 @@ fetch(`https://api.exchangerate.host/latest?base=${left}&symbols=${right}`)
   console.log('error');
 })
 }
-input2.addEventListener('input', (event)=>{
-  // for (let i=0; i<input2.value.length; i++){
-  //   if(input2.value[i] ==',') {
-  //     input2.value[i] = '.'
-  //     console.log(input2.value)
-  //   }
-  // }
-  calc(left, right, 1)
-  cutNumberInput(input2);
-})
-input1.addEventListener('input', (item)=>{
-  calc(left, right, 0)
-  cutNumberInput(input1);
-})
-menuButton.addEventListener('click', (event) =>{
-  if(display){
-  document.querySelector('.showDiv').style.display = 'none';
-  display = false
-  }
-  else{
-    document.querySelector('.showDiv').style.display = 'block';
-    display = true; 
-  }
-})
 function cutNumberInput(num){
   if (num.value.indexOf(".") != '-1') {
     num.value=num.value.substring(0, num.value.indexOf(".") + 5);
@@ -89,17 +82,6 @@ function cutNumber (num){
   }
   return num;
 }
-function deleteDot (num){
-  num = num.toString().split('');
-  for(i=0;i<num.length;i++){
-      if(num[i] == ',') num[i] = '.';
-  }
-  num = num.join('');
-  return Number(num);
-}
-
-
-
 function space (num){
   let dot = false;
   num = despace(num);

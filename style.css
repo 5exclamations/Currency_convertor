@@ -155,6 +155,9 @@ input:focus {
 .showDiv{
     display: none;
 }
+.mainMenu p{
+    display: none;
+}
 }
 @media (max-width: 920px) {
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
@@ -162,7 +165,6 @@ input:focus {
     .head {
         display: none;
     }
-
     .main {
         padding-bottom: 18px;
     }
@@ -172,17 +174,15 @@ input:focus {
     .head-button {
         display: block;
     }
-    
     .showDiv{
         position: absolute;
         display: none;
         margin-top: 60px;
-        margin-left: 90px;
+        margin-left: 8%;
         background-color: #E5E5E5;
         width: 150px;
         padding-left:20px ;
     }
-
     .mainMenu {
         flex-direction: column;
         font-family: Roboto;
@@ -202,9 +202,6 @@ input:focus {
     body {
         margin: 0;
     }
-    /* img:hover {
-        cursor: pointer;
-    } */
     .enterButton:hover{
         background-color: #833AE0;
         color: white;
@@ -252,6 +249,13 @@ input:focus {
     }
     button:hover {
         cursor: pointer;
+    }
+    .mainMenu p{
+        color: #959BA4;
+        /* display: none; */
+    }
+    .showDiv :hover{
+        color: black;
     }
     .main {
         margin: auto;
