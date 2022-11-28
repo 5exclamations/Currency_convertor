@@ -23,10 +23,12 @@ document.querySelectorAll('.right').forEach(element => {
   })
 })
 input2.addEventListener('input', (event)=>{
+  input2.value = input2.value.replace('..', '.').replace('.,', '.');
   calc(right, left, 1)
   cutNumberInput(input2);
 })
 input1.addEventListener('input', (item)=>{
+  input1.value = input1.value.replace('..', '.').replace('.,', '.');
   calc(left, right, 0)
   cutNumberInput(input1);
 })
