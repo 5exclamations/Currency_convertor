@@ -3,7 +3,8 @@ let input1 = document.querySelector('.firstInput');
 let input2 = document.querySelector('.secondInput');
 let left = 'UAH';
 let right = 'USD';
-let menuButton = querySelector('.menuButton');
+let menuButton = document.querySelector('.menuButton');
+let display = true;
 document.querySelectorAll('.left').forEach(element => {
   element.addEventListener('click', ()=>{
     input1.value = 1;
@@ -67,7 +68,14 @@ input1.addEventListener('input', (item)=>{
   cutNumberInput(input1);
 })
 menuButton.addEventListener('click', (event) =>{
-  document.querySelector('.showDiv').style.display = 'none'
+  if(display){
+  document.querySelector('.showDiv').style.display = 'none';
+  display = false
+  }
+  else{
+    document.querySelector('.showDiv').style.display = 'block';
+    display = true; 
+  }
 })
 function cutNumberInput(num){
   if (num.value.indexOf(".") != '-1') {

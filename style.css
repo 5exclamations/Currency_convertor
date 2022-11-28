@@ -27,6 +27,9 @@
 body {
     margin: 0;
 }
+.menuButton{
+    display: none;
+}
 img:hover {
     cursor: pointer;
 }
@@ -161,17 +164,18 @@ input:focus {
     }
 
     .main {
-        
         padding-bottom: 18px;
-        
     }
-    
+    .sections{
+        margin-left: 20%;
+    }
     .head-button {
         display: block;
     }
     
     .showDiv{
         position: absolute;
+        display: none;
         margin-top: 60px;
         margin-left: 90px;
         background-color: #E5E5E5;
@@ -261,6 +265,10 @@ input:focus {
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .conventor{
+        width: auto;
+        text-align: center;
     }
     .section {
         min-width: 265px;
