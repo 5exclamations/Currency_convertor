@@ -23,7 +23,7 @@ document.querySelectorAll('.right').forEach(element => {
   })
 })
 input2.addEventListener('input', (event)=>{
-  calc(left, right, 1)
+  calc(right, left, 1)
   cutNumberInput(input2);
 })
 input1.addEventListener('input', (item)=>{

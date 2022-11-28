@@ -155,7 +155,7 @@ input:focus {
 .showDiv{
     display: none;
 }
-.mainMenu p{
+.showDiv p{
     display: none;
 }
 }
