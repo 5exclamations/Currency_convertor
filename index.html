@@ -3,13 +3,16 @@
 
 <head>
     <title>project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="mainMenu">
         <div class="header">
-            <img src="images/menu.svg" onclick="location.reload(); return false;" alt="menu">
+            <img class="menuButton" src = "images/mainMenu.svg" alt="MainMenu">
+            <!-- onclick="location.reload(); return false;"  -->
+            <img src="./images/menu.svg" alt="menu">
 <div class="head">
     <p>БАНК</p>
     <p>БИЗНЕС</p>
@@ -19,13 +22,13 @@
     <p>ПУТЕШЕСТВИЯ</p>
     <p>РАЗВЛЕЧЕНИЯ</p>
 </div>
-            
+
 <button class="enterButton">ВОЙТИ</button>
         <div class="mob-head">
             <img src="images/menu.svg" class="head-button" alt="menu">
         
 <div class="bankButton">
-    <p>БАНК</p>
+        <p>БАНК</p>
         <p>БИЗНЕС</p>
         <p>ИНВЕСТИЦИИ</p>
         <p>СТРАХОВАНИЕ</p>
@@ -34,6 +37,15 @@
         <p>РАЗВЛЕЧЕНИЯ</p>
  </div>
   </div>
+    </div>
+    <div class="showDiv">
+        <p>БАНК</p>
+        <p>БИЗНЕС</p>
+        <p>ИНВЕСТИЦИИ</p>
+        <p>СТРАХОВАНИЕ</p>
+        <p>МОБАЙЛ</p>
+        <p>ПУТЕШЕСТВИЯ</p>
+        <p>РАЗВЛЕЧЕНИЯ</p>
     </div>
 <div class="main">
      <h1>Конвертер валют онлайн</h1>
@@ -51,7 +63,7 @@
                         </tbody>
                     </table>
                     <div class="values-first block">
-                        <input class="firstInput" type="number">
+                        <input id="enter" class="firstInput" type="Text">
                         <p class="leftP">1 UAH = 0.0271 USD</p>
                     </div>
                 </div>
@@ -68,7 +80,7 @@
                 </tbody>
                     </table>
                     <div class="values-second block">
-                    <input class="secondInput" type="number">
+                    <input id="enter" class="secondInput" type="Text">
                     <p class="rightP">1 USD = 36.8976 UAH</p>
                         
     </div>
@@ -77,7 +89,7 @@
      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js" type="module"></script>   
 </body>
 
 </html>
